@@ -1,0 +1,25 @@
+<ul id="slider" class="bxslider">
+  <li><img src="../assets/Slides/5.jpg" /></li>
+  <li><img src="../assets/Slides/6.jpg" /></li>
+  <li><img src="../assets/Slides/7.jpg" /></li>
+  
+</ul>
+ TEST
+
+<section class="wrContent">
+<h1 [innerHTML]="frontpage.title.rendered"></h1>
+
+<article id="colWR">
+<span class="textCol" [innerHTML]="frontpage.content.rendered"></span>
+</article>
+
+<img src="{{frontpage.better_featured_image.media_details.sizes.medium.source_url}}" alt="Padi logo" id="logo2" />
+</section>
+
+<!-- <div class="wrContent per">
+  <app-i-box class="iBoxWR" *ngFor="let iBox of homeText" [iBox]="iBox"></app-i-box>
+</div>
+
+<div class="wrContent per">
+    <app-p-box class="pBoxWR" *ngFor="let pBox of homeOffers" [pBox]="pBox"></app-p-box>
+</div> --> 

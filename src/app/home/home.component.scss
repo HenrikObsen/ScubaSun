@@ -1,0 +1,83 @@
+@import '../css/Schared.scss';
+//@import '../css/pBox.scss';
+//@import '../css/iBox.scss';
+
+
+#slider{
+  img{
+    border-bottom: solid #16284f 2px;
+  }
+}
+
+.bxslider{
+   
+    width:100%;
+    display: none;
+    
+    
+    @include respond-to(small) { 
+        display: block; 
+        height: 300px;   
+     }
+
+     @include respond-to(medium) { 
+        display: block;   
+        height: 400px;  
+     }
+
+     @include respond-to(large) { 
+        display: block;      
+        height: 450px;   
+     }
+
+     @include respond-to(xl) { 
+        display: block;      
+        height: 500px;   
+     }
+}
+
+
+
+
+  #colWR{
+    width:100%;
+    float: left;
+
+    @include respond-to(small) { 
+        width:100%;
+        float: left;
+    }
+
+    @include respond-to(medium) { 
+        width:75%;
+        float: left;
+    }
+}
+
+
+ 
+
+  //***************************** Forside tekst + logo *****************************
+
+   
+
+    #logo2{
+        display:none;
+
+        @include respond-to(small) { 
+            display:none;
+        }
+
+        @include respond-to(medium) { 
+            width:17%;
+            float: right;
+            margin:0px 10px 20px 0px;
+            display:block;     
+        }
+    }
+ 
+
+ 
+
+    
+

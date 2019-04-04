@@ -1,0 +1,154 @@
+@import 'css/Schared.scss';
+
+  .navbar {
+      margin: 0;
+      height: 60px;
+      background-color: white;
+      border-bottom: solid #16284f 2px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 400;
+      padding: 0;
+      
+
+      .menu {
+          float: right;
+          width: 47%;
+      }
+      
+      .brand {
+          margin: 7px 0 7px 0;
+          width: 200px;
+          float: left;
+          #logo {
+            width: 100%;
+        }
+        
+      }
+        
+   
+  }
+  
+  
+  #toggleMenu {
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    float: right;
+    margin-top: 0px;
+    color: $mainGray;
+    font-size: 25px;
+    cursor: pointer;
+
+    @include respond-to(medium) { 
+      display: none;
+    }
+  }
+  
+  #desktopMenu {
+    margin:0;
+    margin-top:20px;
+    position: fixed;
+    top: 42px;
+    left:0;
+    right:0;
+    z-index: 300;
+    display: none;
+    background-color: #f5f4f4;
+    width: 100%;
+    padding: 30px 0px 20px 0px;
+    list-style-type: none;
+    padding: 0;
+    
+    
+    li {
+      border-bottom: 1px solid #e4e3e3;
+      cursor: pointer;
+    }
+    
+    li a {
+      display: block;
+      padding: 8px;
+      color: #808080;
+      text-decoration: none;
+    }
+
+    @include respond-to(medium) { 
+      position: relative;
+      top:0;
+      background: none;
+   
+      display: block !important;
+      list-style-type: none;
+      margin: 0 10px 0 0;
+      padding: 4px 0 0 0;
+      text-align: right;  
+
+           
+        li {         
+          display: inline-block;
+          border: none;
+          a {
+            font-family: $headlineFonts;
+            display: block;
+            padding:15px 8px;
+            color: gray;
+            text-decoration: none;
+          }
+        }
+
+        .submenu{
+          
+              position: fixed;
+              top: 62px;
+              left: 0;
+              right: 0;
+              text-align: center;
+             background-color: $backGray;
+             
+              li{
+                float: none !important;
+                display: inline-block;
+                padding: 15px;
+
+                a{
+                  color:black;
+                }
+
+              }
+            }
+      }
+  } 
+ 
+
+
+
+  
+  #footer {
+    margin: 0;    
+    background-color:$lightGray;
+    width: 100%;    
+    text-align: center;
+    color: $mainBlue; 
+    font-size:14px;
+    font-weight: bold;
+    font-family: arial;
+    padding:15px 0 15px 0;
+
+    #left {
+      float: left;
+      width: 50%;
+      text-align: left; 
+    }
+  
+    #right {
+      float: left;
+      width: 50%;
+      text-align: right;
+    }
+  }
+  
+  
+  
+  

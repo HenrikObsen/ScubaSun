@@ -1,0 +1,124 @@
+@import 'Respond.scss';
+@import 'Grid.scss';
+$mainBlue: #16284f;
+$mainGray: #8c8e93;
+$lightBlue: #7397ef; 
+$backGray: #ebeced;
+$headerColor: #8c8e93;
+$lightGray: #e2dcdc;
+$headlineFonts: 'Oswald Regular', arial;
+
+@font-face {
+	font-family: "Oswald Regular";
+	src: url("/assets/fonts/Oswald-Regular.ttf") format("truetype");
+}
+
+    img{
+        width:100%;
+    }
+
+    .error{
+        color:red;
+    }
+
+  
+
+    h1 {
+        color:$headerColor;
+        font-weight: normal;
+        font-family: $headlineFonts;
+    }
+  
+    h2 {
+        color: $headerColor;
+        font-weight: normal;
+        font-size: 20px;
+        font-family: $headlineFonts;
+    }
+
+ 
+    @mixin col-wr($float, $mSize) {
+        width:100%;
+        float: $float;
+            
+        @include respond-to(small) { 
+            width:100%;
+            float: $float;
+        }
+    
+        @include respond-to(medium) { 
+            width:$mSize;
+            float: $float;
+        }
+    }
+
+    .wrContent {
+        margin-left:auto;
+        margin-right:auto;
+        width: calc(92% - 30px);
+        position: relative;
+        
+
+        &:after,&:before {
+            content: " ";
+            clear: both;
+            display: table;
+        }  
+
+        @include respond-to(small) { 
+            width: 730px;
+         }
+    
+         @include respond-to(medium) { 
+            width: 960px;
+            
+         }
+    
+         @include respond-to(large) { 
+            width: 1100px;
+           
+         }
+    
+         @include respond-to(xl) { 
+            width: 1100px;
+           
+         }
+    }
+    .wrSpacing{
+        padding: 80px 0 80px 0;
+    }
+    .wrGray {
+        background-color: $backGray;
+        width: 100%;
+        margin:0px 0px 0px 0px;
+        @extend .wrSpacing;
+    }
+
+    
+
+    @mixin text-coll($amount, $gap) {
+        
+        -webkit-column-count: $amount; /* Chrome, Safari, Opera */
+        -moz-column-count: $amount; /* Firefox */
+        column-count: $amount;
+        -webkit-column-gap: $gap; /* Chrome, Safari, Opera */
+        -moz-column-gap: $gap; /* Firefox */
+        column-gap: $gap;
+    }
+   
+    .textCol{ 
+        font-size: 14px;
+        @include text-coll(1,40px); 
+
+        h2{
+            margin-top: 0;
+        }
+        
+        @include respond-to(small) { 
+            @include text-coll(2,40px); 
+         }
+      }
+
+  
+
+
