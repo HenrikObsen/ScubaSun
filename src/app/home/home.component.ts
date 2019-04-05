@@ -19,17 +19,18 @@ export class HomeComponent implements OnInit {
   //public newText: IText;
   constructor(private _dataService: DataService) { }
 
-  search() {
-    let promise = new Promise((resolve, reject) => {
+
+  //search() {
+    // let promise = new Promise((resolve, reject) => {
      
-      this._dataService.getFrontPageText()
-      .subscribe(promise => { this.frontpage = promise;
-      //console.log("FRONTPAGE: " + this.frontpage);
-    } )  
+    //   this._dataService.getFrontPageText()
+    //   .subscribe(promise => { this.frontpage = promise;
+    //   console.log("FRONTPAGE: " + this.frontpage);
+    // } )  
       
-    });
-    return promise;
-  }
+  //   });
+  //   return promise;
+  // }
 
   ngOnInit() {    
     
@@ -38,10 +39,13 @@ export class HomeComponent implements OnInit {
       mode: 'fade',
       }
     );
-
+    this._dataService.getFrontPageText()
+    .subscribe(data => { this.frontpage = data;
+    //console.log("FRONTPAGE: " + this.frontpage);
+  } )  
     
     
-   this.frontpage = this.search();
+   //this.frontpage = this.search();
 
 
 
