@@ -13,16 +13,23 @@ import {map, catchError} from 'rxjs/operators';
 export class DataService {
 
  
-  private _url: string = "/assets/Data/"
+  //private _url: string = "/assets/Data/"
+  private _url: string = "http://localhost:62520/"
   private _pageUrl: string = "http://scubasun.scubafun.dk/wp-json/wp/v2/"
 
   constructor(private http: HttpClient) { }
 
   getFrontPageText(): Observable<JSON[]>{    
-    return this.http.get<JSON[]>(this._pageUrl + "frontpage")
+    return this.http.get<JSON[]>(this._url + "PageBlock/Get/2")
         .pipe(catchError(this.errorHandler));
   }
   
+
+  
+
+
+
+
   getHomeText(): Observable<JSON[]>{    
     return this.http.get<JSON[]>(this._pageUrl + "hometext")
         .pipe(catchError(this.errorHandler));
